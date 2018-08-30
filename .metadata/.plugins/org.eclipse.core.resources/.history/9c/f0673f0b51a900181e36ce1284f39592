@@ -1,0 +1,5 @@
+package com.sh.stock.dbservice.repository;
+
+public interface QuotesRepository {
+
+}

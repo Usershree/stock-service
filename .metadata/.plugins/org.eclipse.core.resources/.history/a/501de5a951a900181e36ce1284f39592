@@ -1,0 +1,5 @@
+package com.sh.stock.dbservice.model;
+
+public class Quotes {
+
+}

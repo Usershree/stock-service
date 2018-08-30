@@ -1,0 +1,61 @@
+package com.sh.stock.dbservice.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="quote",catalog="test")
+public class Quotes {
+	
+	public Quotes() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer ID;
+	
+	@Column(name="user_name")
+	private String username;
+	
+	public Integer getID() {
+		return ID;
+	}
+
+	public void setID(Integer iD) {
+		ID = iD;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public Quotes(String username, String quote) {
+		super();
+		this.username = username;
+		this.quote = quote;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	
+	@Column(name="quote")
+	private String quote;
+
+	public String getQuote() {
+		return quote;
+	}
+
+	public void setQuote(String quote) {
+		this.quote = quote;
+	}
+}

@@ -1,0 +1,5 @@
+package com.sh.stock.dbservice.resource;
+
+public class DbServiceResource {
+
+}

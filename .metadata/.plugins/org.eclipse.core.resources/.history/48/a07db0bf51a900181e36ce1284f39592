@@ -1,0 +1,23 @@
+package com.sh.stock.dbservice.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="quote",catalog="test")
+public class Quotes {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer ID;
+	
+	@Column(name="user_name")
+	private String username;
+	
+	@Column(name="quote")
+	private String quote;
+}
